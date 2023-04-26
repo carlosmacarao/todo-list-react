@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*:focus {
+    outline: none;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #222435;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-weight: 900;
+    color: #7d83b9;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    position: relative;
+    width: 600px;
+    height: 40px;
+    margin: 30px auto;
+    margin-bottom: 60px;
+   
+}
+
+input {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: #2d3046;
+    border: none;
+    padding-left: 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+button.add {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #363b65;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 25px;
+    height: 40px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+button.add:hover {
+    color: #fff;
+    background-color: #363f88;
+}
+
+.listaTarefas {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    width: 600px;
+    margin: auto;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #363b65;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.item:hover {
+    background-color: #151627;
+}
+
+.item span {
+    width: 100%;
+    color: #fff;
+    margin-right: 10px;
+    padding: 10px 15px;
+}
+
+.item.completo {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1e1f2e;
+    border: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.item.completo span {
+    width: 100%;
+    color: #4d506e;
+    margin-right: 10px;
+    padding: 10px 15px;
+    text-decoration: line-through;
+}
+
+button.del {
+    background: none;
+    border: none;
+    color: #4d506e;
+    padding: 15px;
+    cursor: pointer;
+}
+
+button.del:hover {
+    background: #ff004c;
+    border: none;
+    color: #fff;
+    padding: 15px;
+    cursor: pointer;
+}
+
+button.deleteAll {
+    border: 1px solid #ff004c;
+    background: none;
+    padding: 15px;
+    color: #ff004c;
+    font-weight: bold;
+    border-radius: 5px;
+
+}
+
+button.deleteAll:hover {
+    background: #ff004c;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    form {
+        width: 100%;
+    }
+
+    .listaTarefas {
+        width: 100%;
+    }
+}
