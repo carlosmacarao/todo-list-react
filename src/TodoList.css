@@ -136,6 +136,10 @@ button.deleteAll:hover {
     cursor: pointer;
 }
 
+.icone-central {
+    max-width: 100%;
+}
+
 @media screen and (max-width: 900px) {
     form {
         width: 100%;

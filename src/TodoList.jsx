@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './TodoList.css'
+import Icone from './assets/react.svg'
 
 function TodoList () {
 
     const [lista, setLista] = useState([]);
-    const [novoItem, setItem] = useState("");
+    const [novoItem, setNovoItem] = useState("");
 
     function adicionaItem (form) {
         //form.preventDefault();
@@ -33,10 +34,17 @@ function TodoList () {
 
             <div className="listaTarefas">
                  {
-                    lista.length < 1 ? <img src="" alt="" /> : <div className="item">
-                        <span>Tarefa de exemplo</span>
+                    lista.length < 1 
+                    ?
+                    <img className='icone-central' src={Icone} alt="" /> 
+                    : 
+                    lista.map((item, index) => (
+                        <div className="item">
+                        <span>{item.text}</span>
                         <button className="del">Deletar</button>
-                    </div> 
+                        </div>
+                    ))
+                     
                  }
 
                 <div className="item">
